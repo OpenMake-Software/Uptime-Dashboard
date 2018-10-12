@@ -4,15 +4,16 @@ Uptime Dashboard aggregates together 4 Uptime web pages into a single dashboard.
 
 ## Dependencies
 
-jsimone/webapp-runner - webapprunner.jar
-OpenMake-Software/Uptime - uptime.war
-OpenMake-Software/Uptime-Dashboard - uptime-dashboard.war
+* jsimone/webapp-runner - webapprunner.jar
+* OpenMake-Software/Uptime - uptime.war
+* OpenMake-Software/Uptime-Dashboard - uptime-dashboard.war
 
 ## Building
 
 Run the following from the same directory as the pom.xml
 
-```mvn package 
+```
+mvn package 
 ```
 
 ## Running
