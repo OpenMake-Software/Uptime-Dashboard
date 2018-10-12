@@ -43,7 +43,11 @@ import org.w3c.dom.Document;
      long milliSeconds = Long.parseLong(x);
      Date start = new Date(milliSeconds);
      Date now = new Date();
+					String hostname = System.getProperty("hostname");
  
+	    if (hostname == null || hostname.length() == 0)
+						hostname = "localhost";
+					
      long diff = Math.abs(now.getTime() - start.getTime()) / 1000L;
 						
 						this.message = "<html>\n";
@@ -53,25 +57,25 @@ import org.w3c.dom.Document;
 						this.message += "    title=\"Inline Frame Example\"\n";
 						this.message += "    width=\"500\"\n";
 						this.message += "    height=\"380\"\n";
-						this.message += "    src=\"http://localhost:9191/InitServer\">\n";
+						this.message += "    src=\"http://" + hostname + ":9191/InitServer\">\n";
 						this.message += "</iframe>\n";
 						this.message += "<iframe id=\"inlineFrameExample\"\n";
 						this.message += "    title=\"Inline Frame Example\"\n";
 						this.message += "    width=\"500\"\n";
 						this.message += "    height=\"380\"\n";
-						this.message += "    src=\"http://localhost:9191/InitServer\">\n";
+						this.message += "    src=\"http://" + hostname + ":9292/InitServer\">\n";
 						this.message += "</iframe>\n";
 						this.message += "<iframe id=\"inlineFrameExample\"\n";
 						this.message += "    title=\"Inline Frame Example\"\n";
 						this.message += "    width=\"500\"\n";
 						this.message += "    height=\"380\"\n";
-						this.message += "    src=\"http://localhost:9191/InitServer\">\n";
+						this.message += "    src=\"http://" + hostname + ":9393/InitServer\">\n";
 						this.message += "</iframe>\n";
 						this.message += "<iframe id=\"inlineFrameExample\"\n";
 						this.message += "    title=\"Inline Frame Example\"\n";
 						this.message += "    width=\"500\"\n";
 						this.message += "    height=\"380\"\n";
-						this.message += "    src=\"http://localhost:9191/InitServer\">\n";
+						this.message += "    src=\"http://" + hostname + ":9494/InitServer\">\n";
 						this.message += "</iframe>\n";
 						this.message += "</body>\n";
 						this.message += "</html>\n";
